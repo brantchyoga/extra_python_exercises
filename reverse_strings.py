@@ -8,10 +8,9 @@
 # Output: "s'teL od a gniedoc egnellahc"
 
 another_string = "Let's do a coding challenge"
-def splits(str):
+def reverse_words(str):
     str = str.split(' ')
-    print(str)
     for i in range(len(str)):
         str[i] = str[i][::-1]
     return ' '.join(str)
-print(splits(another_string))
+print(reverse_words(another_string))
