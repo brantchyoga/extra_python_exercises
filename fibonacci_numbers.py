@@ -11,4 +11,11 @@
 # list = [0, 1]
 
 
-# *** your code here ***
+def fibonacci(num):
+    lists = [0,1]
+    for i in range(num-2):
+        print(i)
+        thing = lists[len(lists) - 2] + (lists[len(lists)-1])
+        lists.append(thing)
+    return lists
+print(fibonacci(10))

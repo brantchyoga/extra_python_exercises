@@ -7,5 +7,11 @@
 # Input: "Let's do a coding challenge"
 # Output: "s'teL od a gniedoc egnellahc"
 
-
-# *** your code here ***
+another_string = "Let's do a coding challenge"
+def splits(str):
+    str = str.split(' ')
+    print(str)
+    for i in range(len(str)):
+        str[i] = str[i][::-1]
+    return ' '.join(str)
+print(splits(another_string))

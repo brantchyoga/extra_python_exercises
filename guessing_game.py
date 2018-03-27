@@ -1,5 +1,5 @@
 # Guessing Game
-
+from random import *
 # Create a program that asks the user to guess a number between 1 and 100.
 
 # Once the user guesses a number, the program should say, higher, lower, or
@@ -34,5 +34,32 @@
 
 # This will assign the typed input value to your variable as a number
 
+random_number = int(random()*100)
+counts = 1
+def cookies(counts,guess):
+    if (int(guess)>random_number):
+        guess = input(f'the number is you should eat is less than {guess}. Guess Agian!')
+    elif (int(guess)<random_number):
+        guess = input(f'the number is you should eat is more than {guess}. Guess Agian!')
+    if int(guess)==random_number:
+        print(f'Correct you guessed the amount of cookies to eat in {counts} tries. {guess} cookies!')
+    else:
+        counts += 1
+        cookies(counts,guess)
+guess = input("How many cookies should I eat?")
+cookies(counts,guess)
 
-# *** your code here ***
+def cooky():
+    guess = input("How many cookies should I eat?")
+    guesses = 1
+    if int(guess)==random_number:
+        print(f'Correct you guessed the amount of cookies to eat in {guesses} tries. {guess} cookies!')
+    else:
+        while int(guess) != random_number:
+            guesses += 1
+            if (int(guess)>random_number):
+                guess = input(f'the number is you should eat is less than {guess}. Guess Agian!')
+            elif (int(guess)<random_number):
+                guess = input(f'the number is you should eat is more than {guess}. Guess Agian!')
+        print(f'Correct you guessed the amount of cookies to eat in {guesses} tries. {guess} cookies!')
+# cooky()
