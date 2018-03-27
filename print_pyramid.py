@@ -12,8 +12,8 @@
 
 def half_pyramid(num):
 
-    for i in range(num+1):
-        print(' '* (num-i),'#'*i)
+    for i in range(num):
+        print(' '* (num-i),'#'*(i+1))
 half_pyramid(6)
 
 # Challenge
@@ -32,6 +32,6 @@ half_pyramid(6)
 
 def pyramid(num):
 
-    for i in range(num+1):
-        print(' '* (num-i),'#'*i,' ','#'*i)
+    for i in range(num):
+        print(' '* (num-i),'#'*(i+1),'#'*(i+1))
 pyramid(6)
